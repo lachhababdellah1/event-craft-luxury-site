@@ -153,7 +153,7 @@ export default function ContactForm({
                 <Phone className="mr-4 h-6 w-6 text-gold shrink-0" />
                 <div>
                   <h3 className="font-bold mb-1">Call Us</h3>
-                  <p className="text-gray-600">+1 (555) 123-4567</p>
+                  <p className="text-gray-600">+212669-211924</p>
                 </div>
               </div>
             </div>
