@@ -1,12 +1,8 @@
-
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin } from 'lucide-react';
-
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-  
-  return (
-    <footer className="bg-black text-white">
+  return <footer className="bg-black text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
@@ -71,11 +67,11 @@ export default function Footer() {
             <div className="space-y-4">
               <div className="flex items-start">
                 <MapPin className="mr-3 h-5 w-5 text-gold shrink-0" />
-                <p className="text-gray-300">123 Luxury Avenue, Suite 500, New York, NY 10001</p>
+                <p className="text-gray-300">X4G6+R2J, Av. Al Menzeh, Rabat</p>
               </div>
               <div className="flex items-center">
                 <Phone className="mr-3 h-5 w-5 text-gold shrink-0" />
-                <p className="text-gray-300">+1 (555) 123-4567</p>
+                <p className="text-gray-300">+212669-211924</p>
               </div>
               <div className="flex items-center">
                 <Mail className="mr-3 h-5 w-5 text-gold shrink-0" />
@@ -89,6 +85,5 @@ export default function Footer() {
           <p>&copy; {currentYear} SnapEvent. All rights reserved.</p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 }
