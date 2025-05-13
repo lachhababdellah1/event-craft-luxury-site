@@ -1,11 +1,13 @@
 
 import { Card, CardContent } from "@/components/ui/card";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 type TeamMember = {
   name: string;
   position: string;
   bio: string;
   emoji: string;
+  photo?: string;
 };
 
 const team: TeamMember[] = [
@@ -13,25 +15,29 @@ const team: TeamMember[] = [
     name: "Lachhab Abdellah",
     position: "Founder & Owner",
     bio: "Visionary leader with 15+ years in photography, film direction, and luxury event production.",
-    emoji: "🧑‍💼"
+    emoji: "🧑‍💼",
+    photo: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=400&h=400&auto=format&fit=crop&q=80"
   },
   {
     name: "Soukaina Amrani",
     position: "Creative Director",
     bio: "Expert in transforming ideas into captivating visual experiences. Designs events with style, emotion, and impact.",
-    emoji: "🎨"
+    emoji: "🎨",
+    photo: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&auto=format&fit=crop&q=80"
   },
   {
     name: "Mohammed Sousi",
     position: "Digital Marketing Specialist",
     bio: "Drives online campaigns, influencer strategy, and brand presence for top-tier events.",
-    emoji: "📱"
+    emoji: "📱",
+    photo: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=400&auto=format&fit=crop&q=80"
   },
   {
     name: "Hajar Rochdi",
     position: "Content Strategist",
     bio: "Crafts compelling event narratives and manages storytelling across media platforms.",
-    emoji: "✍️"
+    emoji: "✍️",
+    photo: "https://images.unsplash.com/photo-1598550473160-52c0b2a0ff9a?w=400&h=400&auto=format&fit=crop&q=80"
   }
 ];
 
@@ -51,7 +57,15 @@ export default function TeamSection() {
           {team.map((member, index) => (
             <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow overflow-hidden group">
               <CardContent className="p-6 text-center">
-                <div className="text-5xl mb-4">{member.emoji}</div>
+                <div className="flex justify-center mb-6">
+                  <Avatar className="h-32 w-32 border-2 border-gold">
+                    {member.photo ? (
+                      <AvatarImage src={member.photo} alt={member.name} />
+                    ) : (
+                      <AvatarFallback className="text-4xl">{member.emoji}</AvatarFallback>
+                    )}
+                  </Avatar>
+                </div>
                 <h3 className="font-playfair font-bold text-xl mb-2">{member.name}</h3>
                 <p className="text-gold font-medium mb-3">{member.position}</p>
                 <p className="text-gray-600 text-sm">{member.bio}</p>
