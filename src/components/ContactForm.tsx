@@ -137,7 +137,7 @@ export default function ContactForm({
                 <MapPin className="mr-4 h-6 w-6 text-gold shrink-0" />
                 <div>
                   <h3 className="font-bold mb-1">Visit Us</h3>
-                  <p className="text-gray-600">123 Luxury Avenue, Suite 500, New York, NY 10001</p>
+                  <p className="text-gray-600"> X4G6+R2J, Av. Al Menzeh, Rabat</p>
                 </div>
               </div>
               
