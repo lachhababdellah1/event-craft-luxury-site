@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 type TeamMember = {
@@ -12,31 +13,31 @@ const team: TeamMember[] = [{
   position: "Founder & Owner",
   bio: "Visionary leader with 15+ years in photography, film direction, and luxury event production.",
   emoji: "🧑‍💼",
-  photo: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=400&h=400&auto=format&fit=crop&q=80"
+  photo: "/lovable-uploads/4fc95dbe-c60f-47cc-ad4b-06b0fb84a582.png"
 }, {
   name: "Soukaina Amrani",
   position: "Creative Director",
   bio: "Expert in transforming ideas into captivating visual experiences. Designs events with style, emotion, and impact.",
   emoji: "🎨",
-  photo: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&auto=format&fit=crop&q=80"
+  photo: "/lovable-uploads/8fb518f3-5859-49f9-bfd5-837e37d00e9b.png"
 }, {
   name: "Mohammed Sousi",
   position: "Digital Marketing Specialist",
   bio: "Drives online campaigns, influencer strategy, and brand presence for top-tier events.",
   emoji: "📱",
-  photo: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=400&auto=format&fit=crop&q=80"
+  photo: "/lovable-uploads/e10d7fec-5be8-4c89-a080-4e787163742b.png"
 }, {
   name: "Hajar Rochdi",
   position: "Content Strategist",
   bio: "Crafts compelling event narratives and manages storytelling across media platforms.",
   emoji: "✍️",
-  photo: "https://images.unsplash.com/photo-1598550473160-52c0b2a0ff9a?w=400&h=400&auto=format&fit=crop&q=80"
+  photo: "/lovable-uploads/8caad3c4-b94e-4a25-9db9-63a1fab4c722.png"
 }];
 export default function TeamSection() {
   return <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 font-playfair">Meet Our Team</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 font-playfair">Our Team</h2>
           <div className="w-24 h-1 bg-gold mx-auto mb-6"></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
             At SnapEvent, our strength lies in the passion and expertise of our team. Together, we create unforgettable experiences that reflect elegance, precision, and creativity.
