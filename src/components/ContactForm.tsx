@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -6,13 +5,10 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin } from "lucide-react";
-
 type ContactLanguage = 'en' | 'fr';
-
 type ContactProps = {
   lang?: ContactLanguage;
 };
-
 const translations = {
   en: {
     title: "Get in Touch",
@@ -32,7 +28,7 @@ const translations = {
     budget: "Budget Range",
     budgets: {
       b1: "$10,000 - $25,000",
-      b2: "$25,000 - $50,000", 
+      b2: "$25,000 - $50,000",
       b3: "$50,000 - $100,000",
       b4: "$100,000+"
     },
@@ -60,7 +56,7 @@ const translations = {
     budget: "Fourchette Budgétaire",
     budgets: {
       b1: "10 000€ - 25 000€",
-      b2: "25 000€ - 50 000€", 
+      b2: "25 000€ - 50 000€",
       b3: "50 000€ - 100 000€",
       b4: "100 000€+"
     },
@@ -71,11 +67,13 @@ const translations = {
     error: "Une erreur s'est produite. Veuillez réessayer."
   }
 };
-
-export default function ContactForm({ lang = 'en' }: ContactProps) {
+export default function ContactForm({
+  lang = 'en'
+}: ContactProps) {
   const t = translations[lang];
-  const { toast } = useToast();
-  
+  const {
+    toast
+  } = useToast();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -84,30 +82,35 @@ export default function ContactForm({ lang = 'en' }: ContactProps) {
     budget: "",
     message: ""
   });
-  
   const [loading, setLoading] = useState(false);
-  
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    const {
+      name,
+      value
+    } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
   };
-  
   const handleSelectChange = (name: string, value: string) => {
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
   };
-  
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    
+
     // Simulate form submission
     setTimeout(() => {
       setLoading(false);
       toast({
         title: "Inquiry Received",
-        description: t.success,
+        description: t.success
       });
-      
+
       // Reset form
       setFormData({
         name: "",
@@ -119,9 +122,7 @@ export default function ContactForm({ lang = 'en' }: ContactProps) {
       });
     }, 1000);
   };
-  
-  return (
-    <section className="py-24 bg-white" id="contact">
+  return <section className="py-24 bg-white" id="contact">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
@@ -148,7 +149,7 @@ export default function ContactForm({ lang = 'en' }: ContactProps) {
                 </div>
               </div>
               
-              <div className="flex items-start">
+              <div className="+212669211924">
                 <Phone className="mr-4 h-6 w-6 text-gold shrink-0" />
                 <div>
                   <h3 className="font-bold mb-1">Call Us</h3>
@@ -165,14 +166,7 @@ export default function ContactForm({ lang = 'en' }: ContactProps) {
                   <label htmlFor="name" className="block mb-2 text-sm font-medium">
                     {t.name} <span className="text-red-500">*</span>
                   </label>
-                  <Input
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="bg-white"
-                  />
+                  <Input id="name" name="name" value={formData.name} onChange={handleChange} required className="bg-white" />
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -180,28 +174,13 @@ export default function ContactForm({ lang = 'en' }: ContactProps) {
                     <label htmlFor="email" className="block mb-2 text-sm font-medium">
                       {t.email} <span className="text-red-500">*</span>
                     </label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className="bg-white"
-                    />
+                    <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} required className="bg-white" />
                   </div>
                   <div>
                     <label htmlFor="phone" className="block mb-2 text-sm font-medium">
                       {t.phone}
                     </label>
-                    <Input
-                      id="phone"
-                      name="phone"
-                      type="tel"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      className="bg-white"
-                    />
+                    <Input id="phone" name="phone" type="tel" value={formData.phone} onChange={handleChange} className="bg-white" />
                   </div>
                 </div>
                 
@@ -210,11 +189,7 @@ export default function ContactForm({ lang = 'en' }: ContactProps) {
                     <label htmlFor="eventType" className="block mb-2 text-sm font-medium">
                       {t.eventType} <span className="text-red-500">*</span>
                     </label>
-                    <Select 
-                      value={formData.eventType} 
-                      onValueChange={(value) => handleSelectChange("eventType", value)}
-                      required
-                    >
+                    <Select value={formData.eventType} onValueChange={value => handleSelectChange("eventType", value)} required>
                       <SelectTrigger className="bg-white">
                         <SelectValue placeholder={t.eventType} />
                       </SelectTrigger>
@@ -232,10 +207,7 @@ export default function ContactForm({ lang = 'en' }: ContactProps) {
                     <label htmlFor="budget" className="block mb-2 text-sm font-medium">
                       {t.budget}
                     </label>
-                    <Select 
-                      value={formData.budget} 
-                      onValueChange={(value) => handleSelectChange("budget", value)}
-                    >
+                    <Select value={formData.budget} onValueChange={value => handleSelectChange("budget", value)}>
                       <SelectTrigger className="bg-white">
                         <SelectValue placeholder={t.budget} />
                       </SelectTrigger>
@@ -253,23 +225,10 @@ export default function ContactForm({ lang = 'en' }: ContactProps) {
                   <label htmlFor="message" className="block mb-2 text-sm font-medium">
                     {t.message} <span className="text-red-500">*</span>
                   </label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    rows={5}
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    placeholder={t.messagePlaceholder}
-                    className="bg-white"
-                  />
+                  <Textarea id="message" name="message" rows={5} value={formData.message} onChange={handleChange} required placeholder={t.messagePlaceholder} className="bg-white" />
                 </div>
                 
-                <Button 
-                  type="submit" 
-                  className="bg-gold hover:bg-gold-dark text-white w-full"
-                  disabled={loading}
-                >
+                <Button type="submit" className="bg-gold hover:bg-gold-dark text-white w-full" disabled={loading}>
                   {loading ? "Submitting..." : t.submit}
                 </Button>
               </div>
@@ -277,6 +236,5 @@ export default function ContactForm({ lang = 'en' }: ContactProps) {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }
