@@ -16,90 +16,90 @@ type Service = {
 const services: Service[] = [
   {
     id: "corporate",
-    title: "Corporate Events",
-    description: "Create memorable corporate events that strengthen your brand, engage your audience, and achieve your business objectives. From executive retreats to product launches, we bring sophistication and strategic thinking to every corporate occasion.",
+    title: "Événements d'Entreprise",
+    description: "Créez des événements d'entreprise mémorables qui renforcent votre marque, engagent votre public et atteignent vos objectifs commerciaux. Des retraites pour cadres aux lancements de produits, nous apportons sophistication et réflexion stratégique à chaque occasion d'entreprise.",
     features: [
-      "Conferences and Conventions",
-      "Executive Retreats",
-      "Award Ceremonies",
-      "Holiday Parties",
-      "Team Building Events",
-      "Annual Meetings"
+      "Conférences et Conventions",
+      "Retraites pour Dirigeants",
+      "Cérémonies de Remise de Prix",
+      "Soirées de Fin d'Année",
+      "Événements de Team Building",
+      "Réunions Annuelles"
     ],
     image: "https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fHByb2R1Y3QlMjBsYXVuY2h8ZW58MHx8MHx8fDA%3D",
     emoji: "🏢"
   },
   {
     id: "government",
-    title: "Government Ceremonies",
-    description: "Execute formal government events with precision, respect for protocol, and appropriate grandeur. Our team understands the unique requirements of official ceremonies and ensures dignified, flawless occasions.",
+    title: "Cérémonies Gouvernementales",
+    description: "Exécutez des événements gouvernementaux formels avec précision, respect du protocole et grandeur appropriée. Notre équipe comprend les exigences uniques des cérémonies officielles et garantit des occasions dignes et irréprochables.",
     features: [
-      "Diplomatic Receptions",
-      "Official Inaugurations",
-      "State Visits",
-      "National Day Celebrations",
-      "Award Presentations",
-      "International Delegations"
+      "Réceptions Diplomatiques",
+      "Inaugurations Officielles",
+      "Visites d'État",
+      "Célébrations de la Fête Nationale",
+      "Remises de Décorations",
+      "Délégations Internationales"
     ],
     image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGdvdmVybm1lbnQlMjBjZXJlbW9ueXxlbnwwfHwwfHx8MA%3D%3D",
     emoji: "🏛️"
   },
   {
     id: "weddings",
-    title: "Luxury Weddings",
-    description: "Transform your special day into an extraordinary celebration of love with our luxury wedding planning services. We create bespoke wedding experiences that reflect your unique story and exceed your expectations.",
+    title: "Mariages de Luxe",
+    description: "Transformez votre jour spécial en une célébration extraordinaire de l'amour avec nos services de planification de mariage de luxe. Nous créons des expériences de mariage sur mesure qui reflètent votre histoire unique et dépassent vos attentes.",
     features: [
-      "Destination Weddings",
-      "Celebrity Weddings",
-      "Cultural Ceremonies",
-      "Luxury Reception Design",
-      "VIP Guest Management",
-      "Exclusive Venue Selection"
+      "Mariages de Destination",
+      "Mariages de Célébrités",
+      "Cérémonies Culturelles",
+      "Conception de Réception de Luxe",
+      "Gestion des Invités VIP",
+      "Sélection de Lieux Exclusifs"
     ],
     image: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2VkZGluZ3xlbnwwfHwwfHx8MA%3D%3D",
     emoji: "💍"
   },
   {
     id: "launches",
-    title: "Product & Store Launches",
-    description: "Create buzz and impact with strategic product launches and store openings that capture attention and drive engagement. We craft experiences that showcase your brand and create lasting impressions.",
+    title: "Lancements de Produits & Magasins",
+    description: "Créez du buzz et de l'impact avec des lancements stratégiques de produits et des ouvertures de magasins qui captent l'attention et suscitent l'engagement. Nous élaborons des expériences qui mettent en valeur votre marque et créent des impressions durables.",
     features: [
-      "Brand Activation Events",
-      "Media Preview Events",
-      "VIP Shopping Experiences",
-      "Pop-up Installations",
-      "Flagship Store Openings",
-      "Fashion Shows"
+      "Événements d'Activation de Marque",
+      "Événements d'Avant-Première pour les Médias",
+      "Expériences de Shopping VIP",
+      "Installations Éphémères",
+      "Ouvertures de Magasins Phares",
+      "Défilés de Mode"
     ],
     image: "https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8ZXZlbnR8ZW58MHx8MHx8fDA%3D",
     emoji: "🚀"
   },
   {
     id: "celebrity",
-    title: "Celebrity Appearances",
-    description: "Manage celebrity engagements with discretion, professionalism, and attention to detail. From logistics and security to media management, we ensure seamless experiences for high-profile individuals.",
+    title: "Apparitions de Célébrités",
+    description: "Gérez les engagements des célébrités avec discrétion, professionnalisme et attention aux détails. De la logistique et la sécurité à la gestion des médias, nous assurons des expériences fluides pour les personnes de haut profil.",
     features: [
-      "Celebrity Guest Coordination",
-      "Security Planning",
-      "Private Transportation",
-      "Media Management",
-      "VIP Hospitality",
-      "Confidentiality Protocols"
+      "Coordination des Invités Célébrités",
+      "Planification de la Sécurité",
+      "Transport Privé",
+      "Gestion des Médias",
+      "Hospitalité VIP",
+      "Protocoles de Confidentialité"
     ],
     image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2VsZWJyaXR5JTIwZXZlbnR8ZW58MHx8MHx8fDA%3D",
     emoji: "⭐"
   },
   {
     id: "media",
-    title: "Media & PR Coverage",
-    description: "Amplify your event's impact with strategic media relations and PR coverage. We create compelling stories and secure meaningful media exposure that enhances your brand and extends your reach.",
+    title: "Couverture Médiatique & RP",
+    description: "Amplifiez l'impact de votre événement avec des relations médiatiques stratégiques et une couverture RP. Nous créons des histoires captivantes et assurons une exposition médiatique significative qui valorise votre marque et étend votre portée.",
     features: [
-      "Press Conference Organization",
-      "Media Relations Management",
-      "Influencer Partnerships",
-      "Content Creation",
-      "Social Media Campaigns",
-      "Post-Event PR Coverage"
+      "Organisation de Conférences de Presse",
+      "Gestion des Relations Médias",
+      "Partenariats avec des Influenceurs",
+      "Création de Contenu",
+      "Campagnes sur les Réseaux Sociaux",
+      "Couverture RP Post-Événement"
     ],
     image: "https://images.unsplash.com/photo-1611159063981-b8c8c4301869?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHByZXNzJTIwY29uZmVyZW5jZXxlbnwwfHwwfHx8MA%3D%3D",
     emoji: "📸"
@@ -116,12 +116,12 @@ const Services = () => {
           <div className="absolute inset-0 z-0 opacity-40">
             <img 
               src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z2FsYXxlbnwwfHwwfHx8MA%3D%3D" 
-              alt="Our Services" 
+              alt="Nos Services" 
               className="w-full h-full object-cover"
             />
           </div>
           <div className="container relative z-10 mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 font-playfair">Our Services</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 font-playfair">Nos Services</h1>
             <div className="w-24 h-1 bg-gold mx-auto"></div>
           </div>
         </div>
@@ -130,10 +130,10 @@ const Services = () => {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center mb-16">
-              <h2 className="text-3xl font-bold mb-6 font-playfair">Comprehensive Event Solutions</h2>
+              <h2 className="text-3xl font-bold mb-6 font-playfair">Solutions Événementielles Complètes</h2>
               <div className="w-24 h-1 bg-gold mx-auto mb-8"></div>
               <p className="text-gray-700">
-                At SnapEvent, we offer a complete range of luxury event planning services tailored to meet the unique needs of our distinguished clients. From initial concept to flawless execution, our team brings creativity, precision, and sophistication to every event we create.
+                Chez SnapEvent, nous offrons une gamme complète de services de planification d'événements de luxe adaptés aux besoins uniques de nos clients distingués. Du concept initial à l'exécution impeccable, notre équipe apporte créativité, précision et sophistication à chaque événement que nous créons.
               </p>
             </div>
           </div>
@@ -160,7 +160,7 @@ const Services = () => {
                   </ul>
                   <Link to="/contact">
                     <Button className="bg-gold hover:bg-gold-dark text-white">
-                      Inquire About This Service
+                      Demander des Informations
                     </Button>
                   </Link>
                 </div>
@@ -179,19 +179,19 @@ const Services = () => {
         {/* CTA Section */}
         <section className="py-24 bg-black text-white">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 font-playfair">Ready to Create an Unforgettable Event?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 font-playfair">Prêt à Créer un Événement Inoubliable?</h2>
             <p className="max-w-2xl mx-auto mb-8 text-gray-300">
-              Contact us today to discuss your vision, and let our team of experts bring it to life with elegance and precision.
+              Contactez-nous dès aujourd'hui pour discuter de votre vision, et laissez notre équipe d'experts la concrétiser avec élégance et précision.
             </p>
             <Link to="/contact">
               <Button className="bg-gold hover:bg-gold-dark text-white text-lg px-8 py-6">
-                Get in Touch
+                Contactez-nous
               </Button>
             </Link>
           </div>
         </section>
       </main>
-      <Footer />
+      <Footer lang="fr" />
     </>
   );
 };

@@ -5,10 +5,12 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin } from "lucide-react";
+
 type ContactLanguage = 'en' | 'fr';
 type ContactProps = {
   lang?: ContactLanguage;
 };
+
 const translations = {
   en: {
     title: "Get in Touch",
@@ -64,11 +66,15 @@ const translations = {
     messagePlaceholder: "Veuillez partager des détails sur votre événement, y compris la date, le lieu et toute exigence spécifique.",
     submit: "Envoyer la Demande",
     success: "Merci! Nous vous contacterons bientôt.",
-    error: "Une erreur s'est produite. Veuillez réessayer."
+    error: "Une erreur s'est produite. Veuillez réessayer.",
+    visitUs: "Visitez-nous",
+    emailUs: "Envoyez-nous un email",
+    callUs: "Appelez-nous"
   }
 };
+
 export default function ContactForm({
-  lang = 'en'
+  lang = 'fr'
 }: ContactProps) {
   const t = translations[lang];
   const {
@@ -136,23 +142,23 @@ export default function ContactForm({
               <div className="flex items-start">
                 <MapPin className="mr-4 h-6 w-6 text-gold shrink-0" />
                 <div>
-                  <h3 className="font-bold mb-1">Visit Us</h3>
-                  <p className="text-gray-600"> X4G6+R2J, Av. Al Menzeh, Rabat</p>
+                  <h3 className="font-bold mb-1">{t.visitUs || "Visitez-nous"}</h3>
+                  <p className="text-gray-600">X4G6+R2J, Av. Al Menzeh, Rabat</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <Mail className="mr-4 h-6 w-6 text-gold shrink-0" />
                 <div>
-                  <h3 className="font-bold mb-1">Email Us</h3>
+                  <h3 className="font-bold mb-1">{t.emailUs || "Envoyez-nous un email"}</h3>
                   <p className="text-gray-600">abdou.lachhab@gmail.com</p>
                 </div>
               </div>
               
-              <div className="+212669211924">
+              <div className="flex items-start">
                 <Phone className="mr-4 h-6 w-6 text-gold shrink-0" />
                 <div>
-                  <h3 className="font-bold mb-1">Call Us</h3>
+                  <h3 className="font-bold mb-1">{t.callUs || "Appelez-nous"}</h3>
                   <p className="text-gray-600">+212669-211924</p>
                 </div>
               </div>
@@ -229,7 +235,7 @@ export default function ContactForm({
                 </div>
                 
                 <Button type="submit" className="bg-gold hover:bg-gold-dark text-white w-full" disabled={loading}>
-                  {loading ? "Submitting..." : t.submit}
+                  {loading ? "Envoi en cours..." : t.submit}
                 </Button>
               </div>
             </form>

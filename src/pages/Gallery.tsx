@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -10,6 +9,33 @@ type GalleryItem = {
   src: string;
   alt: string;
   category: string;
+};
+
+const translations = {
+  en: {
+    title: "Event Gallery",
+    subtitle: "Browse through our collection of prestigious events we've organized for our distinguished clients. Each event represents our commitment to excellence and attention to detail.",
+    all: "All",
+    corporate: "Corporate",
+    government: "Government",
+    wedding: "Weddings",
+    launch: "Launches",
+    celebrity: "Celebrity",
+    media: "Media",
+    portfolio: "Our Portfolio"
+  },
+  fr: {
+    title: "Galerie d'Événements",
+    subtitle: "Parcourez notre collection d'événements prestigieux que nous avons organisés pour nos clients distingués. Chaque événement représente notre engagement envers l'excellence et l'attention aux détails.",
+    all: "Tous",
+    corporate: "Entreprise",
+    government: "Gouvernement",
+    wedding: "Mariages",
+    launch: "Lancements",
+    celebrity: "Célébrité",
+    media: "Médias",
+    portfolio: "Notre Portfolio"
+  }
 };
 
 const galleryItems: GalleryItem[] = [
@@ -136,7 +162,7 @@ const galleryItems: GalleryItem[] = [
 
 const Gallery = () => {
   const [activeCategory, setActiveCategory] = useState("all");
-  const [selectedImage, setSelectedImage] = useState<GalleryItem | null>(null);
+  const t = translations.fr;
   
   const filteredGallery = activeCategory === "all" 
     ? galleryItems 
@@ -151,12 +177,12 @@ const Gallery = () => {
           <div className="absolute inset-0 z-0 opacity-40">
             <img 
               src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2VsZWJyaXR5JTIwZXZlbnR8ZW58MHx8MHx8fDA%3D" 
-              alt="Event Gallery" 
+              alt={t.title} 
               className="w-full h-full object-cover"
             />
           </div>
           <div className="container relative z-10 mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 font-playfair">Event Gallery</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 font-playfair">{t.title}</h1>
             <div className="w-24 h-1 bg-gold mx-auto"></div>
           </div>
         </div>
@@ -165,10 +191,10 @@ const Gallery = () => {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center mb-16">
-              <h2 className="text-3xl font-bold mb-6 font-playfair">Our Portfolio</h2>
+              <h2 className="text-3xl font-bold mb-6 font-playfair">{t.portfolio}</h2>
               <div className="w-24 h-1 bg-gold mx-auto mb-8"></div>
               <p className="text-gray-700">
-                Browse through our collection of prestigious events we've organized for our distinguished clients. Each event represents our commitment to excellence and attention to detail.
+                {t.subtitle}
               </p>
               
               {/* Category Tabs */}
@@ -179,49 +205,49 @@ const Gallery = () => {
                     onClick={() => setActiveCategory("all")}
                     className="data-[state=active]:bg-gold data-[state=active]:text-white"
                   >
-                    All
+                    {t.all}
                   </TabsTrigger>
                   <TabsTrigger 
                     value="corporate" 
                     onClick={() => setActiveCategory("corporate")}
                     className="data-[state=active]:bg-gold data-[state=active]:text-white"
                   >
-                    Corporate
+                    {t.corporate}
                   </TabsTrigger>
                   <TabsTrigger 
                     value="government" 
                     onClick={() => setActiveCategory("government")}
                     className="data-[state=active]:bg-gold data-[state=active]:text-white"
                   >
-                    Government
+                    {t.government}
                   </TabsTrigger>
                   <TabsTrigger 
                     value="wedding" 
                     onClick={() => setActiveCategory("wedding")}
                     className="data-[state=active]:bg-gold data-[state=active]:text-white"
                   >
-                    Weddings
+                    {t.wedding}
                   </TabsTrigger>
                   <TabsTrigger 
                     value="launch" 
                     onClick={() => setActiveCategory("launch")}
                     className="data-[state=active]:bg-gold data-[state=active]:text-white"
                   >
-                    Launches
+                    {t.launch}
                   </TabsTrigger>
                   <TabsTrigger 
                     value="celebrity" 
                     onClick={() => setActiveCategory("celebrity")}
                     className="data-[state=active]:bg-gold data-[state=active]:text-white"
                   >
-                    Celebrity
+                    {t.celebrity}
                   </TabsTrigger>
                   <TabsTrigger 
                     value="media" 
                     onClick={() => setActiveCategory("media")}
                     className="data-[state=active]:bg-gold data-[state=active]:text-white"
                   >
-                    Media
+                    {t.media}
                   </TabsTrigger>
                 </TabsList>
               </Tabs>
@@ -258,7 +284,7 @@ const Gallery = () => {
           </div>
         </section>
       </main>
-      <Footer />
+      <Footer lang="fr" />
     </>
   );
 };

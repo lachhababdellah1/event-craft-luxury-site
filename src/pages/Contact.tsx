@@ -14,18 +14,18 @@ const Contact = () => {
           <div className="absolute inset-0 z-0 opacity-40">
             <img 
               src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8ZXZlbnR8ZW58MHx8MHx8fDA%3D" 
-              alt="Contact Us" 
+              alt="Contactez-nous" 
               className="w-full h-full object-cover"
             />
           </div>
           <div className="container relative z-10 mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 font-playfair">Contact Us</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 font-playfair">Contactez-nous</h1>
             <div className="w-24 h-1 bg-gold mx-auto"></div>
           </div>
         </div>
         
         {/* Contact Form */}
-        <ContactForm />
+        <ContactForm lang="fr" />
         
         {/* Map Section */}
         <section className="py-16">
@@ -36,8 +36,8 @@ const Contact = () => {
                 <div className="absolute inset-0 bg-gray-300 flex items-center justify-center">
                   <div className="text-center">
                     <MapPin className="h-12 w-12 text-gold mx-auto mb-4" />
-                    <h3 className="text-xl font-bold">Visit Our Office</h3>
-                    <p className="text-gray-600">123 Luxury Avenue, Suite 500, New York, NY 10001</p>
+                    <h3 className="text-xl font-bold">Visitez Notre Bureau</h3>
+                    <p className="text-gray-600">123 Avenue de Luxe, Suite 500, Rabat, Maroc</p>
                   </div>
                 </div>
               </div>
@@ -45,7 +45,7 @@ const Contact = () => {
           </div>
         </section>
       </main>
-      <Footer />
+      <Footer lang="fr" />
     </>
   );
 };

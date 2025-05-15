@@ -1,7 +1,62 @@
+
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin } from 'lucide-react';
-export default function Footer() {
+
+type FooterLanguage = 'en' | 'fr';
+
+type FooterProps = {
+  lang?: FooterLanguage;
+};
+
+const translations = {
+  en: {
+    description: "Creating unforgettable, luxury experiences for prestigious clients and brands.",
+    quickLinks: "Quick Links",
+    links: {
+      home: "Home",
+      about: "About Us",
+      services: "Our Services",
+      gallery: "Gallery",
+      contact: "Contact Us"
+    },
+    services: "Services",
+    serviceTypes: {
+      corporate: "Corporate Events",
+      government: "Government Ceremonies",
+      wedding: "Luxury Weddings",
+      product: "Product Launches",
+      celebrity: "Celebrity Appearances"
+    },
+    contactUs: "Contact Us",
+    rights: "All rights reserved."
+  },
+  fr: {
+    description: "Création d'expériences de luxe inoubliables pour des clients et des marques prestigieux.",
+    quickLinks: "Liens Rapides",
+    links: {
+      home: "Accueil",
+      about: "À Propos",
+      services: "Nos Services",
+      gallery: "Galerie",
+      contact: "Contact"
+    },
+    services: "Services",
+    serviceTypes: {
+      corporate: "Événements d'Entreprise",
+      government: "Cérémonies Gouvernementales",
+      wedding: "Mariages de Luxe",
+      product: "Lancements de Produits",
+      celebrity: "Apparitions de Célébrités"
+    },
+    contactUs: "Contactez-nous",
+    rights: "Tous droits réservés."
+  }
+};
+
+export default function Footer({ lang = 'fr' }: FooterProps) {
+  const t = translations[lang];
   const currentYear = new Date().getFullYear();
+  
   return <footer className="bg-black text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
@@ -12,7 +67,7 @@ export default function Footer() {
               <span className="text-gold">Event</span>
             </h3>
             <p className="text-gray-300 mb-4">
-              Creating unforgettable, luxury experiences for prestigious clients and brands.
+              {t.description}
             </p>
             <div className="flex space-x-4 mt-6">
               <a href="#" className="text-white hover:text-gold transition-colors">
@@ -39,31 +94,31 @@ export default function Footer() {
           
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl font-playfair font-bold mb-6">Quick Links</h3>
+            <h3 className="text-xl font-playfair font-bold mb-6">{t.quickLinks}</h3>
             <ul className="space-y-3">
-              <li><Link to="/" className="text-gray-300 hover:text-gold transition-colors">Home</Link></li>
-              <li><Link to="/about" className="text-gray-300 hover:text-gold transition-colors">About Us</Link></li>
-              <li><Link to="/services" className="text-gray-300 hover:text-gold transition-colors">Our Services</Link></li>
-              <li><Link to="/gallery" className="text-gray-300 hover:text-gold transition-colors">Gallery</Link></li>
-              <li><Link to="/contact" className="text-gray-300 hover:text-gold transition-colors">Contact Us</Link></li>
+              <li><Link to="/" className="text-gray-300 hover:text-gold transition-colors">{t.links.home}</Link></li>
+              <li><Link to="/about" className="text-gray-300 hover:text-gold transition-colors">{t.links.about}</Link></li>
+              <li><Link to="/services" className="text-gray-300 hover:text-gold transition-colors">{t.links.services}</Link></li>
+              <li><Link to="/gallery" className="text-gray-300 hover:text-gold transition-colors">{t.links.gallery}</Link></li>
+              <li><Link to="/contact" className="text-gray-300 hover:text-gold transition-colors">{t.links.contact}</Link></li>
             </ul>
           </div>
           
           {/* Services */}
           <div>
-            <h3 className="text-xl font-playfair font-bold mb-6">Services</h3>
+            <h3 className="text-xl font-playfair font-bold mb-6">{t.services}</h3>
             <ul className="space-y-3">
-              <li><Link to="/services" className="text-gray-300 hover:text-gold transition-colors">Corporate Events</Link></li>
-              <li><Link to="/services" className="text-gray-300 hover:text-gold transition-colors">Government Ceremonies</Link></li>
-              <li><Link to="/services" className="text-gray-300 hover:text-gold transition-colors">Luxury Weddings</Link></li>
-              <li><Link to="/services" className="text-gray-300 hover:text-gold transition-colors">Product Launches</Link></li>
-              <li><Link to="/services" className="text-gray-300 hover:text-gold transition-colors">Celebrity Appearances</Link></li>
+              <li><Link to="/services" className="text-gray-300 hover:text-gold transition-colors">{t.serviceTypes.corporate}</Link></li>
+              <li><Link to="/services" className="text-gray-300 hover:text-gold transition-colors">{t.serviceTypes.government}</Link></li>
+              <li><Link to="/services" className="text-gray-300 hover:text-gold transition-colors">{t.serviceTypes.wedding}</Link></li>
+              <li><Link to="/services" className="text-gray-300 hover:text-gold transition-colors">{t.serviceTypes.product}</Link></li>
+              <li><Link to="/services" className="text-gray-300 hover:text-gold transition-colors">{t.serviceTypes.celebrity}</Link></li>
             </ul>
           </div>
           
           {/* Contact */}
           <div>
-            <h3 className="text-xl font-playfair font-bold mb-6">Contact Us</h3>
+            <h3 className="text-xl font-playfair font-bold mb-6">{t.contactUs}</h3>
             <div className="space-y-4">
               <div className="flex items-start">
                 <MapPin className="mr-3 h-5 w-5 text-gold shrink-0" />
@@ -82,7 +137,7 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-          <p>&copy; {currentYear} SnapEvent. All rights reserved.</p>
+          <p>&copy; {currentYear} SnapEvent. {t.rights}</p>
         </div>
       </div>
     </footer>;

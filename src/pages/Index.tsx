@@ -16,17 +16,17 @@ const Index = () => {
     <>
       <Header />
       <main>
-        <HeroSection />
-        <AboutSection />
+        <HeroSection lang="fr" />
+        <AboutSection lang="fr" />
         <ServicesSection />
         <PhotographyVRSection />
         <GallerySection />
         <ClientsSection />
         <TeamSection />
         <TestimonialsSection />
-        <ContactForm />
+        <ContactForm lang="fr" />
       </main>
-      <Footer />
+      <Footer lang="fr" />
     </>
   );
 };

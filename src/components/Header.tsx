@@ -26,7 +26,7 @@ const translations = {
 };
 
 export default function Header() {
-  const [lang, setLang] = useState<LanguageType>('en');
+  const [lang, setLang] = useState<LanguageType>('fr');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   
   const t = translations[lang];

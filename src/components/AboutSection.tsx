@@ -1,30 +1,55 @@
-
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
-export default function AboutSection() {
+type AboutLanguage = 'en' | 'fr';
+
+type AboutProps = {
+  lang?: AboutLanguage;
+};
+
+const translations = {
+  en: {
+    title: "About SnapEvent",
+    description1: "For over a decade, SnapEvent has been at the forefront of luxury event planning, creating unforgettable experiences for prestigious clients worldwide. Our reputation for excellence and attention to detail has made us the preferred choice for government institutions, famous brands, and high-profile individuals.",
+    description2: "We combine creativity with precision, transforming your vision into a flawless reality. From concept development to execution, our team of experts handles every aspect of your event with professionalism and discretion.",
+    description3: "Our commitment to perfection and our extensive network of premium vendors allow us to deliver extraordinary events that reflect your unique brand and objectives.",
+    cta: "Learn More About Us"
+  },
+  fr: {
+    title: "À Propos de SnapEvent",
+    description1: "Depuis plus de dix ans, SnapEvent est à l'avant-garde de la planification d'événements de luxe, créant des expériences inoubliables pour des clients prestigieux du monde entier. Notre réputation d'excellence et notre attention aux détails ont fait de nous le choix privilégié des institutions gouvernementales, des marques célèbres et des personnalités de haut rang.",
+    description2: "Nous combinons créativité et précision pour transformer votre vision en une réalité impeccable. Du développement du concept à l'exécution, notre équipe d'experts gère chaque aspect de votre événement avec professionnalisme et discrétion.",
+    description3: "Notre engagement envers la perfection et notre vaste réseau de fournisseurs premium nous permettent de réaliser des événements extraordinaires qui reflètent votre marque et vos objectifs uniques.",
+    cta: "En Savoir Plus Sur Nous"
+  }
+};
+
+export default function AboutSection({ lang = 'fr' }: AboutProps) {
+  const t = translations[lang];
+  
   return (
     <section className="py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 font-playfair">About SnapEvent</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 font-playfair">{t.title}</h2>
             <div className="w-24 h-1 bg-gold mb-8"></div>
             <p className="text-gray-700 mb-6">
-              For over a decade, SnapEvent has been at the forefront of luxury event planning, creating unforgettable experiences for prestigious clients worldwide. Our reputation for excellence and attention to detail has made us the preferred choice for government institutions, famous brands, and high-profile individuals.
+              {t.description1}
             </p>
             <p className="text-gray-700 mb-6">
-              We combine creativity with precision, transforming your vision into a flawless reality. From concept development to execution, our team of experts handles every aspect of your event with professionalism and discretion.
+              {t.description2}
             </p>
             <p className="text-gray-700 mb-8">
-              Our commitment to perfection and our extensive network of premium vendors allow us to deliver extraordinary events that reflect your unique brand and objectives.
+              {t.description3}
             </p>
             <Link to="/about">
               <Button className="bg-black hover:bg-gray-800 text-white">
-                Learn More About Us
+                {t.cta}
               </Button>
             </Link>
           </div>
+          
           <div className="grid grid-cols-2 gap-4">
             <div>
               <img 

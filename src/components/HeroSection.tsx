@@ -22,7 +22,7 @@ const translations = {
   }
 };
 
-export default function HeroSection({ lang = 'en' }: HeroProps) {
+export default function HeroSection({ lang = 'fr' }: HeroProps) {
   const t = translations[lang];
   const [loaded, setLoaded] = useState(false);
   
