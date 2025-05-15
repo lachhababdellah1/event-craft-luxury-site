@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Link } from "react-router-dom";
-import { Camera, Video, View360 } from "lucide-react";
+import { Camera, Video, View } from "lucide-react";
 
 export default function PhotographyVRSection() {
   return (
@@ -43,7 +43,7 @@ export default function PhotographyVRSection() {
           {/* 360° VR Card */}
           <div className="bg-gray-50 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
             <div className="mb-4 text-gold flex justify-center">
-              <View360 size={48} className="stroke-gold" />
+              <View size={48} className="stroke-gold" />
             </div>
             <h3 className="text-xl font-playfair font-bold mb-3 text-center">360° Virtual Reality</h3>
             <p className="text-gray-600 text-center">
