@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -38,7 +39,10 @@ const translations = {
     messagePlaceholder: "Please share details about your event, including the date, location, and any specific requirements.",
     submit: "Submit Inquiry",
     success: "Thank you! We'll be in touch soon.",
-    error: "Something went wrong. Please try again."
+    error: "Something went wrong. Please try again.",
+    visitUs: "Visit Us",
+    emailUs: "Email Us",
+    callUs: "Call Us"
   },
   fr: {
     title: "Contactez-nous",
