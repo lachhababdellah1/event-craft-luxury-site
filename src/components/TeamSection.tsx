@@ -31,7 +31,7 @@ const team: TeamMember[] = [{
   position: "Content Strategist",
   bio: "Crafts compelling event narratives and manages storytelling across media platforms.",
   emoji: "✍️",
-  photo: "/lovable-uploads/8caad3c4-b94e-4a25-9db9-63a1fab4c722.png"
+  photo: "/lovable-uploads/3d48b27c-1d2b-4dda-b2c8-c90e4d958a91.png"
 }];
 export default function TeamSection() {
   return <section className="py-20 bg-white">
