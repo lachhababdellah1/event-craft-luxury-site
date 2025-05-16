@@ -40,7 +40,7 @@ const services: Service[] = [
     description: "Strategic product launches and store openings that generate buzz and create memorable brand experiences.",
     icon: "🚀",
     link: "/services#launches",
-    image: "https://images.unsplash.com/photo-1494891848038-7bd202a2afeb?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
+    image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
   },
   {
     title: "Celebrity Appearances",
