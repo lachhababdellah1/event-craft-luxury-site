@@ -16,7 +16,7 @@ export default function ClientsSection() {
   const clients: ClientLogo[] = [
     {
       name: "Redal",
-      logo: "/logos/redal.png",
+      logo: "/lovable-uploads/73f7d7f4-a667-46ee-b96c-2675a71a8246.png",
       website: "https://www.redal.ma",
       description: "Leading utility provider in Morocco"
     },
